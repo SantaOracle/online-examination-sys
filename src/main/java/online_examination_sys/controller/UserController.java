@@ -1,5 +1,6 @@
 package online_examination_sys.controller;
 
+import online_examination_sys.domain.dao.dto.BaseDTO;
 import online_examination_sys.domain.dao.dto.TestDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,13 +28,18 @@ public class UserController {
 	 */
 	@RequestMapping(value = "/login")
 	@ResponseBody
-	public TestDTO login(
+	public BaseDTO login(
 		@RequestParam(value = "username", required = true)String username,
 		@RequestParam(value = "password", required = true)String password,
 		@RequestParam(value = "isAdmin", required = true)int isAdmin
 	) {
-		TestDTO testDTO = new TestDTO();
-		return testDTO;
+	    User user = new User();
+	    user.setUsername(username);
+	    user.setPassword(password);
+	    user.setIsAdmin(isAdmin);
+
+        BaseDTO baseDTO = userService.login(user);
+	    return baseDTO;
 	}
 
 	@RequestMapping(value = "/register")
@@ -42,10 +48,6 @@ public class UserController {
 		@RequestParam(value = "username", required = true)String username,
 		@RequestParam(value = "password", required = true)String password
 	){
-		//验证用户名是否存在
-
-		//验证通过，数据存储
-
 		TestDTO testDTO = new TestDTO();
 		return testDTO;
 	}
