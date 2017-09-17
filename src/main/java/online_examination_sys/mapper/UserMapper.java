@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 import online_examination_sys.domain.dao.dto.RegisterDTO;
-import online_examination_sys.domain.dao.po.Token;
 import online_examination_sys.domain.dao.po.User;
 
 
