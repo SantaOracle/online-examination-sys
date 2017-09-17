@@ -2,6 +2,7 @@ package online_examination_sys.controller;
 
 import online_examination_sys.domain.dao.dto.BaseDTO;
 import online_examination_sys.domain.dao.dto.TestDTO;
+import online_examination_sys.domain.dao.dto.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,15 +21,9 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	/**
-	 * 用户登录
-	 * @param username	用户名
-	 * @param password	密码
-	 * @return
-	 */
 	@RequestMapping(value = "/login")
 	@ResponseBody
-	public BaseDTO login(
+	public UserDTO login(
 		@RequestParam(value = "username", required = true)String username,
 		@RequestParam(value = "password", required = true)String password,
 		@RequestParam(value = "isAdmin", required = true)int isAdmin
@@ -38,31 +33,41 @@ public class UserController {
 	    user.setPassword(password);
 	    user.setIsAdmin(isAdmin);
 
-        BaseDTO baseDTO = userService.login(user);
-	    return baseDTO;
+        UserDTO userDTO = userService.login(user);
+	    return userDTO;
 	}
 
 	@RequestMapping(value = "/register")
 	@ResponseBody
-	public TestDTO register(
+	public UserDTO register(
 		@RequestParam(value = "username", required = true)String username,
 		@RequestParam(value = "password", required = true)String password
 	){
-		TestDTO testDTO = new TestDTO();
-		return testDTO;
-	}
-	
+	    User user = new User();
+	    user.setUsername(username);
+	    user.setPassword(password);
+	    user.setIsAdmin(0);
 
-	@RequestMapping(value = "/undateInfo")
+		UserDTO userDTO = userService.register(user);
+		return userDTO;
+	}
+
+	@RequestMapping(value = "/updateInfo")
 	@ResponseBody
-	public TestDTO undateInfo(
+	public UserDTO updateInfo(
 		@RequestParam(value = "id", required = true)int id,
 		@RequestParam(value = "username", required = true)String username,
 		@RequestParam(value = "password", required = false)String password,
 		@RequestParam(value = "isAdmin", required = true)int isAdmin
 	){
 
-		TestDTO testDTO = new TestDTO();
-		return testDTO;
+        User user = new User();
+        user.setId(id);
+        if (username != null) user.setUsername(username);
+        if (password != null) user.setPassword(password);
+        user.setIsAdmin(isAdmin);
+
+        UserDTO userDTO = userService.updateInfo(user);
+        return userDTO;
 	}
 }

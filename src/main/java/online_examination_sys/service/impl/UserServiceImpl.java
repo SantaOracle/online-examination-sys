@@ -10,6 +10,8 @@ import online_examination_sys.domain.dao.po.User;
 import online_examination_sys.mapper.UserMapper;
 import online_examination_sys.service.UserService;
 
+import javax.annotation.Resource;
+
 
 @Service
 public class UserServiceImpl implements UserService {
