@@ -12,7 +12,7 @@ import springfox.documentation.annotations.ApiIgnore;
 
 @Controller
 @SpringBootApplication
-@MapperScan("test.mapper")
+@MapperScan("com.yonyou.train.mapper")
 @ApiIgnore
 @EnableScheduling 
 public class BootMain extends WebMvcConfigurerAdapter{
