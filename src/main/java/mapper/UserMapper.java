@@ -1,12 +1,12 @@
-package test.mapper;
+package mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
-import test.domain.dao.dto.RegisterDTO;
-import test.domain.dao.po.Token;
-import test.domain.dao.po.User;
+import domain.dao.dto.RegisterDTO;
+import domain.dao.po.Token;
+import domain.dao.po.User;
 
 
 public interface UserMapper {

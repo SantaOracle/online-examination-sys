@@ -1,9 +1,9 @@
-package test.service;
+package service;
 
-import test.domain.dao.dto.RegisterDTO;
-import test.domain.dao.po.User;
-import test.domain.json.BaseJSON;
-import test.domain.json.FindUserJSON;
+import domain.dao.dto.RegisterDTO;
+import domain.dao.po.User;
+import domain.json.BaseJSON;
+import domain.json.FindUserJSON;
 
 public interface UserService {
 	

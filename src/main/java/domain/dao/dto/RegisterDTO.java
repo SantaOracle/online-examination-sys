@@ -1,4 +1,4 @@
-package test.domain.dao.dto;
+package domain.dao.dto;
 
 public class RegisterDTO {
 	private String username;

@@ -1,6 +1,4 @@
-package test.controller;
-
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
+package controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,11 +11,11 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-import test.domain.dao.dto.RegisterDTO;
-import test.domain.dao.po.User;
-import test.domain.json.BaseJSON;
-import test.domain.json.FindUserJSON;
-import test.service.UserService;
+import domain.dao.dto.RegisterDTO;
+import domain.dao.po.User;
+import domain.json.BaseJSON;
+import domain.json.FindUserJSON;
+import service.UserService;
 
 @RestController
 @EnableSwagger2

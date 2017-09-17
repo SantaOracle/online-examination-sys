@@ -3,15 +3,7 @@
 * Copyright ©2016 yonyou . All rights reserved
 ***********************************************************************/
 
-package test.comfig;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
+package config;
 
 //import com.alibaba.fastjson.JSON;
 //import com.yonyou.train.service.UserService;

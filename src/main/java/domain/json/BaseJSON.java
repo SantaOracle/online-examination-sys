@@ -1,4 +1,4 @@
-package test.domain.json;
+package domain.json;
 
 public class BaseJSON {
 	
