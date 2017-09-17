@@ -8,6 +8,8 @@ public class PaperDTO extends BaseDTO {
 	private int paperId;
 	private String title;
 	private List<Subject> SubjectList;
+	
+	
 	public int getPaperId() {
 		return paperId;
 	}
