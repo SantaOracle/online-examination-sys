@@ -1,8 +1,8 @@
-package test.domain.json;
+package domain.json;
 
 import java.util.List;
 
-import test.domain.dao.po.User;
+import domain.dao.po.User;
 
 
 public class FindUserJSON extends BaseJSON{

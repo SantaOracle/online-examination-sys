@@ -1,6 +1,6 @@
-package test.domain.json;
+package domain.json;
 
-import test.domain.dao.po.Token;
+import domain.dao.po.Token;
 
 public class LoginJSON extends BaseJSON {
 	private Token token;

@@ -1,4 +1,4 @@
-package test.domain.dao.po;
+package domain.dao.po;
 
 public class User {
 	
