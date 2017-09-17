@@ -34,18 +34,24 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO register(User user) {
-		User resUser = userMapper.getUserByUser(user);
+		//验证是否已经有该用户名注册
+		User userForQuery = new User();
+		userForQuery.setUsername(user.getUsername());
+		User resUser = userMapper.getUserByUser(userForQuery);
 		UserDTO userDTO = new UserDTO();
+		//根据验证结果，来决定是否写库
 		if (resUser == null){
 			userMapper.addUser(user);
 		}else{
-
+			userDTO.setResultCode(0);
+			userDTO.setResultMsg("该用户名已存在");
 		}
 		return userDTO;
 	}
 
 	@Override
 	public UserDTO updateInfo(User user) {
-		return null;
+		userMapper.updateUserById(user);
+		return new UserDTO();
 	}
 }

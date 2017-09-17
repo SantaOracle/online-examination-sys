@@ -15,7 +15,7 @@ public interface UserMapper {
 
 	User getUserByUser(User user);
 
-	int updateUserById(@Param("userId")int id);
+	int updateUserById(User user);
 
 	int addUser(User user);
 
