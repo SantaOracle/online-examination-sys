@@ -11,8 +11,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper {
 
-	List<User> getAllUser();
-
 	User getUserByUser(User user);
 
 	int updateUserById(User user);
