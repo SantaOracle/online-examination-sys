@@ -1,6 +1,7 @@
 package online_examination_sys.domain.dao.po;
 
 public class Subject {
+	
     private int id;
     private String title;
     private String answer_str;
