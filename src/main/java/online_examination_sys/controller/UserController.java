@@ -3,14 +3,13 @@ package online_examination_sys.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import online_examination_sys.domain.dao.dto.RegisterDTO;
 import online_examination_sys.domain.dao.po.User;
 import online_examination_sys.domain.json.BaseJSON;
@@ -18,20 +17,23 @@ import online_examination_sys.domain.json.FindUserJSON;
 import online_examination_sys.service.UserService;
 
 @RestController
-@EnableSwagger2
 @RequestMapping("/user")
-@Api("用户管理相关接口")
 public class UserController {
 	
 	@Autowired
 	private UserService userService;
-	
-	@ApiOperation("用户登录")
-	@ApiImplicitParams({
-		@ApiImplicitParam(paramType = "query", name = "username", dataType = "String", required = true, value = "用户名"),
-		@ApiImplicitParam(paramType = "query", name = "password", dataType = "String", required = true, value = "密码")})
+
+	/**
+	 * 用户登录
+	 * @param username	用户名
+	 * @param password	密码
+	 * @return
+	 */
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public BaseJSON login(String username, String password) {
+	public BaseJSON login(
+			@RequestParam(value = "username", defaultValue = "", required = true)String username,
+			@RequestParam(value = "password", defaultValue = "", required = true)String password
+	) {
 		System.out.println(111);
 		return userService.login(username, password);
 	}
