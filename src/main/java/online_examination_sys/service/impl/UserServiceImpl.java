@@ -21,12 +21,27 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserDTO login(User user) {
-		return null;
+		User resUser = userMapper.getUserByUser(user);
+		UserDTO userDTO = new UserDTO();
+		if (resUser == null){
+			userDTO.setResultCode(0);
+			userDTO.setResultMsg("用户名或密码错误");
+		}else{
+			userDTO.setUser(resUser);
+		}
+		return userDTO;
 	}
 
 	@Override
 	public UserDTO register(User user) {
-		return null;
+		User resUser = userMapper.getUserByUser(user);
+		UserDTO userDTO = new UserDTO();
+		if (resUser == null){
+			userMapper.addUser(user);
+		}else{
+
+		}
+		return userDTO;
 	}
 
 	@Override

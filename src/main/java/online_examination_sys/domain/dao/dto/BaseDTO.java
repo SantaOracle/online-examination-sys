@@ -7,7 +7,8 @@ public class BaseDTO {
     private String resultMsg;
 
     public BaseDTO(){
-        this.resultCode = 0;
+        //默认请求成功
+        this.resultCode = 1;
         this.resultMsg = new String();
     }
 
