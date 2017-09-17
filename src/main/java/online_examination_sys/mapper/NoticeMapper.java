@@ -1,6 +1,5 @@
 package online_examination_sys.mapper;
 
-import online_examination_sys.domain.dao.dto.RegisterDTO;
 import online_examination_sys.domain.dao.po.Notice;
 import org.apache.ibatis.annotations.Param;
 
@@ -11,7 +10,7 @@ public interface NoticeMapper {
 
     public Notice getNoticeById(@Param("Id") int id);
 
-    public int addNotice( RegisterDTO notice);
+    public int addNotice( Notice notice);
 
     public int updateNoticeById(Notice notice);
 

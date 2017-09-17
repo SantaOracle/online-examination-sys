@@ -5,9 +5,9 @@ import online_examination_sys.domain.dao.dto.NoticeListDTO;
 
 public interface NoticeService {
 
-	public BaseDTO addNotice(String title, String context, String publisherId);
+	public BaseDTO addNotice(String title, String context, int publisherId);
 	
-	public BaseDTO deleteNotice(String id);
+	public BaseDTO deleteNotice(int id);
 	
 	public NoticeListDTO showNoticeList();
 	

@@ -22,7 +22,7 @@ public class NoticeController {
 	public BaseDTO addNotice(
 			@RequestParam(value = "title", required = true)String title,
 			@RequestParam(value = "context", required = true)String context,
-			@RequestParam(value = "publisherId", required = true)String publisherId
+			@RequestParam(value = "publisherId", required = true)int publisherId
 	) {
 		return noticeService.addNotice(title, context, publisherId);
 	}
@@ -30,7 +30,7 @@ public class NoticeController {
 	@RequestMapping(value = "/deleteNotice")
 	@ResponseBody
 	public BaseDTO deleteNotice(
-			@RequestParam(value = "id", required = true)String id			
+			@RequestParam(value = "id", required = true)int id			
 	) {
 		return noticeService.deleteNotice(id);
 	}
