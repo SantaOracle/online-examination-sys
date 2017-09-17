@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yonyou.train.mapper.UserMapper">
+
+	<select id="getAllUsers" resultType="User">
+		select * from user where 1 = 1
+	</select>
+
+	<select id="getUserById" resultType="User">
+		select * from user where user_id=#{userId}
+	</select>
+	
+	<select id="getUserByUsername" resultType="User">
+		select * from user where username = #{username}
+	</select>
+	
+	<insert id="addUser" parameterType="RegisterDTO">
+		INSERT INTO `user`( `username`, `password`, `phone`) VALUES (#{username},#{password},#{phone})
+	</insert>
+	
+	<update id="updateUserById" parameterType="User">
+		UPDATE `user` SET `username`=#{username},`password`=#{password},`phone`=#{phone} WHERE `user_id`=#{userId}
+	</update>
+	
+	<delete id="deleteUserById">
+		DELETE FROM `user` WHERE user_id = #{userId}
+	</delete>
+	
+	<insert id="addToken" parameterType="Token">
+		insert into token(token_id, start_time, end_time, user_id) values (#{tokenId}, #{startTime}, #{endTime}, #{userId})
+	</insert>
+	
+	<select id="getToken" resultType="Token">
+		select * from token where token_id = #{tokenId} and user_id = #{userId}
+	</select>
+	
+	<delete id="deleteToken">
+		delete from token where token_id = #{tokenId} and user_id = #{userId}
+	</delete>
+	
+</mapper>
