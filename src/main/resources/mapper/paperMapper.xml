@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online_examination_sys.mapper.UserMapper">
+
+    <select id="getAllPaper" resultType="Paper">
+        select * from paper where 1 = 1
+    </select>
+
+    <select id="getTitleById" resultType="String">
+        select title from paper where id=#{Id}
+    </select>
+
+    <select id="getPaperById" resultType="Paper">
+        select * from paper where id = #{Id}
+    </select>
+
+    <insert id="addPaper" parameterType="RegisterDTO">
+        INSERT INTO `paper`( `title`, `subject_ids_str`) VALUES (#{Title},#{Subject_ids_str})
+    </insert>
+
+    <update id="updatePaperById" parameterType="Paper">
+        UPDATE `paper` SET `title`=#{Title},`subject_ids_str`=#{Subject_ids_str},` WHERE `id`=#{Id}
+    </update>
+
+    <delete id="deletePaperById">
+        DELETE FROM `paper` WHERE id = #{Id}
+    </delete>
+
+</mapper>
