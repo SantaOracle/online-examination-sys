@@ -27,13 +27,13 @@ public class UserController {
 	 */
 	@RequestMapping(value = "/login")
 	@ResponseBody
-	public RegisterDTO login(
+	public TestDTO login(
 		@RequestParam(value = "username", required = true)String username,
 		@RequestParam(value = "password", required = true)String password,
 		@RequestParam(value = "isAdmin", required = true)int isAdmin
 	) {
-		RegisterDTO registerDTO = new RegisterDTO();
-		return registerDTO;
+		TestDTO testDTO = new TestDTO();
+		return testDTO;
 	}
 
 	@RequestMapping(value = "/register")

@@ -1,5 +1,5 @@
 package online_examination_sys.domain.dao.dto;
 
-public class RegisterDTO {
+public class RegisterDTO extends BaseDTO{
 
 }
