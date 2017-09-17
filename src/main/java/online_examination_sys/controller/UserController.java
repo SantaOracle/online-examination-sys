@@ -28,9 +28,9 @@ public class UserController {
 	@RequestMapping(value = "/login")
 	@ResponseBody
 	public RegisterDTO login(
-		@RequestParam(value = "username", defaultValue = "", required = true)String username,
-		@RequestParam(value = "password", defaultValue = "", required = true)String password,
-		@RequestParam(value = "isAdmin", defaultValue = "0", required = true)int isAdmin
+		@RequestParam(value = "username", required = true)String username,
+		@RequestParam(value = "password", required = true)String password,
+		@RequestParam(value = "isAdmin", required = true)int isAdmin
 	) {
 		RegisterDTO registerDTO = new RegisterDTO();
 		return registerDTO;
@@ -39,8 +39,8 @@ public class UserController {
 	@RequestMapping(value = "/register")
 	@ResponseBody
 	public TestDTO register(
-		@RequestParam(value = "username", defaultValue = "", required = true)String username,
-		@RequestParam(value = "password", defaultValue = "", required = true)String password
+		@RequestParam(value = "username", required = true)String username,
+		@RequestParam(value = "password", required = true)String password
 	){
 		//验证用户名是否存在
 
@@ -54,10 +54,10 @@ public class UserController {
 	@RequestMapping(value = "/undateInfo")
 	@ResponseBody
 	public TestDTO undateInfo(
-		@RequestParam(value = "id", defaultValue = "", required = true)int id,
-		@RequestParam(value = "username", defaultValue = "", required = true)String username,
-		@RequestParam(value = "password", defaultValue = "", required = false)String password,
-		@RequestParam(value = "isAdmin", defaultValue = "0", required = true)int isAdmin
+		@RequestParam(value = "id", required = true)int id,
+		@RequestParam(value = "username", required = true)String username,
+		@RequestParam(value = "password", required = false)String password,
+		@RequestParam(value = "isAdmin", required = true)int isAdmin
 	){
 
 		TestDTO testDTO = new TestDTO();
