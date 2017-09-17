@@ -6,21 +6,17 @@ import org.apache.ibatis.annotations.Param;
 
 import online_examination_sys.domain.dao.dto.RegisterDTO;
 import online_examination_sys.domain.dao.po.User;
+import org.springframework.stereotype.Repository;
 
-
+@Repository
 public interface UserMapper {
-	
-	public List<User> getAllUser();
-	
-	public User getUserById(@Param("userId") int id);
-	
-	public int addUser( RegisterDTO user);
-	
-	public int updateUserById(User user);
-	
-	public int deleteUserById(@Param("userId") int id);
-	
-	public User getUserByUsername(@Param("username") String username);
 
-	public int deleteToken(@Param("userId") int userId, @Param("tokenId") String tokenId);
+	List<User> getAllUser();
+
+	User getUserByUser(User user);
+
+	int updateUserById(@Param("userId")int id);
+
+	int addUser(User user);
+
 }
