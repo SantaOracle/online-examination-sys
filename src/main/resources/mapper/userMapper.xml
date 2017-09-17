@@ -29,16 +29,4 @@
 		DELETE FROM `user` WHERE user_id = #{userId}
 	</delete>
 	
-	<insert id="addToken" parameterType="Token">
-		insert into token(token_id, start_time, end_time, user_id) values (#{tokenId}, #{startTime}, #{endTime}, #{userId})
-	</insert>
-	
-	<select id="getToken" resultType="Token">
-		select * from token where token_id = #{tokenId} and user_id = #{userId}
-	</select>
-	
-	<delete id="deleteToken">
-		delete from token where token_id = #{tokenId} and user_id = #{userId}
-	</delete>
-	
 </mapper>

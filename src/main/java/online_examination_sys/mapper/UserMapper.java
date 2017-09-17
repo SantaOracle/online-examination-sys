@@ -21,10 +21,6 @@ public interface UserMapper {
 	public int deleteUserById(@Param("userId") int id);
 	
 	public User getUserByUsername(@Param("username") String username);
-	
-	public int addToken(Token token);
-	
-	public Token getToken(@Param("userId") int userId, @Param("tokenId") String tokenId);
-	
+
 	public int deleteToken(@Param("userId") int userId, @Param("tokenId") String tokenId);
 }
