@@ -1,9 +1,9 @@
-package service;
+package online_examination_sys.service;
 
-import domain.dao.dto.RegisterDTO;
-import domain.dao.po.User;
-import domain.json.BaseJSON;
-import domain.json.FindUserJSON;
+import online_examination_sys.domain.dao.dto.RegisterDTO;
+import online_examination_sys.domain.dao.po.User;
+import online_examination_sys.domain.json.BaseJSON;
+import online_examination_sys.domain.json.FindUserJSON;
 
 public interface UserService {
 	

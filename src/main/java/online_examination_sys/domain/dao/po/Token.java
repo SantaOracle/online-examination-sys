@@ -1,4 +1,4 @@
-package domain.dao.po;
+package online_examination_sys.domain.dao.po;
 
 import java.util.Date;
 

@@ -1,8 +1,8 @@
-package domain.json;
+package online_examination_sys.domain.json;
 
 import java.util.List;
 
-import domain.dao.po.User;
+import online_examination_sys.domain.dao.po.User;
 
 
 public class FindUserJSON extends BaseJSON{

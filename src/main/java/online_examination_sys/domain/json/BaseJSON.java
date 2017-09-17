@@ -1,4 +1,4 @@
-package domain.json;
+package online_examination_sys.domain.json;
 
 public class BaseJSON {
 	

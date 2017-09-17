@@ -1,4 +1,4 @@
-package domain.dao.po;
+package online_examination_sys.domain.dao.po;
 
 public class User {
 	

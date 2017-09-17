@@ -1,6 +1,6 @@
-package domain.json;
+package online_examination_sys.domain.json;
 
-import domain.dao.po.Token;
+import online_examination_sys.domain.dao.po.Token;
 
 public class LoginJSON extends BaseJSON {
 	private Token token;

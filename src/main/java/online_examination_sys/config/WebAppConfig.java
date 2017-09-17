@@ -3,7 +3,7 @@
 * Copyright ©2016 yonyou . All rights reserved
 ***********************************************************************/
 
-package config;
+package online_examination_sys.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

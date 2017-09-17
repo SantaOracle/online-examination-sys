@@ -1,4 +1,4 @@
-package domain.dao.dto;
+package online_examination_sys.domain.dao.dto;
 
 public class RegisterDTO {
 	private String username;

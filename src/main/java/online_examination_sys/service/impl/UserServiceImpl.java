@@ -1,14 +1,14 @@
-package service.impl;
+package online_examination_sys.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import domain.dao.dto.RegisterDTO;
-import domain.dao.po.User;
-import domain.json.BaseJSON;
-import domain.json.FindUserJSON;
-import mapper.UserMapper;
-import service.UserService;
+import online_examination_sys.domain.dao.dto.RegisterDTO;
+import online_examination_sys.domain.dao.po.User;
+import online_examination_sys.domain.json.BaseJSON;
+import online_examination_sys.domain.json.FindUserJSON;
+import online_examination_sys.mapper.UserMapper;
+import online_examination_sys.service.UserService;
 
 
 @Service
@@ -37,8 +37,9 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public BaseJSON login(String username, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		BaseJSON baseJSON = new BaseJSON();
+		baseJSON.setResultCode(0);
+		return baseJSON;
 	}
 
 	@Override

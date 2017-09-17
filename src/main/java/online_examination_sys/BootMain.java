@@ -1,4 +1,4 @@
-package test;
+package online_examination_sys;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +12,7 @@ import springfox.documentation.annotations.ApiIgnore;
 
 @Controller
 @SpringBootApplication
-@MapperScan("com.yonyou.train.mapper")
+@MapperScan("online_examination_sys.mapper")
 @ApiIgnore
 @EnableScheduling 
 public class BootMain extends WebMvcConfigurerAdapter{
