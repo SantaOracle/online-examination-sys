@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="online_examination_sys.mapper.NoticeMapper">
+
+    <select id="getAllNotice" resultType="Notice">
+        select * from notice where 1 = 1
+    </select>
+
+    <select id="getNoticeById" resultType="Notice">
+        select * from notice where id = #{Id}
+    </select>
+
+    <insert id="addNotice" parameterType="RegisterDTO">
+        INSERT INTO `notice`( `title`, `context`, `publisher_id`) VALUES (#{Title},#{Context},#{Publisher_id})
+    </insert>
+
+    <update id="updatevById" parameterType="Notice">
+        UPDATE `notice` SET `title`=#{Title},`context`=#{context},`publisher_id`= #{Publisher_id} WHERE  id =#{Id}
+    </update>
+
+    <delete id="deleteNoticeById">
+        DELETE FROM `notice` WHERE id = #{Id}
+    </delete>
+
+</mapper>
