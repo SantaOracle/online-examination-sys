@@ -39,6 +39,7 @@ public class UserServiceImpl implements UserService {
 		userForQuery.setUsername(user.getUsername());
 		User resUser = userMapper.getUserByUser(userForQuery);
 		UserDTO userDTO = new UserDTO();
+
 		//根据验证结果，来决定是否写库
 		if (resUser == null){
 			userMapper.addUser(user);

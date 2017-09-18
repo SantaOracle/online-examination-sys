@@ -2,9 +2,11 @@ package online_examination_sys.mapper;
 
 import online_examination_sys.domain.dao.po.Notice;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface NoticeMapper {
     public List<Notice> getAllNotice();
 
