@@ -39,7 +39,7 @@ public class SubjectController {
         return subjectService.updateSubject(id, title, answerStr, answerIndex);
     }
 
-    @RequestMapping(value = "/addSubject")
+    @RequestMapping(value = "/deleteSubject")
     @ResponseBody
     public BaseDTO deleteSubject(
         @RequestParam(value = "id", required = true)int id
@@ -47,7 +47,7 @@ public class SubjectController {
     	return subjectService.deleteSubject(id);
     }
     
-    @RequestMapping(value = "/addSubject")
+    @RequestMapping(value = "/showSubjectList")
     @ResponseBody
     public SubjectListDTO showSubjectList() {
     	return subjectService.showSubjectList();

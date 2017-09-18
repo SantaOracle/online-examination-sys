@@ -3,6 +3,7 @@ package online_examination_sys.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import online_examination_sys.domain.dao.dto.BaseDTO;
 import online_examination_sys.domain.dao.dto.SubjectListDTO;
@@ -10,6 +11,7 @@ import online_examination_sys.domain.dao.po.Subject;
 import online_examination_sys.mapper.SubjectMapper;
 import online_examination_sys.service.SubjectService;
 
+@Service
 public class SubjectServiceImpl implements SubjectService {
 
 	@Autowired

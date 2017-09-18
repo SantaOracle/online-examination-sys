@@ -1,6 +1,5 @@
 package online_examination_sys.mapper;
 
-import online_examination_sys.domain.dao.dto.RegisterDTO;
 import online_examination_sys.domain.dao.po.Subject;
 import org.apache.ibatis.annotations.Param;
 

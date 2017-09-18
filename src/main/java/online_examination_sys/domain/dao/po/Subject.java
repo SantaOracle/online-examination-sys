@@ -4,8 +4,8 @@ public class Subject {
 	
     private int id;
     private String title;
-    private String answer_str;
-    private int answer_index;
+    private String answerStr;
+    private int answerIndex;
 
     public int getId() {
         return id;
@@ -24,24 +24,24 @@ public class Subject {
     }
 
     public String getAnswer_str() {
-        return answer_str;
+        return answerStr;
     }
 
     public void setAnswer_str(String answer_str) {
-        this.answer_str = answer_str;
+        this.answerStr = answer_str;
     }
 
     public int getAnswer_index() {
-        return answer_index;
+        return answerIndex;
     }
 
     public void setAnswer_index(int answer_index) {
-        this.answer_index = answer_index;
+        this.answerIndex = answer_index;
     }
     @Override
     public String toString(){
-        return "Subject [Id=" + id + ", Title=" + title + ", Answer_str=" + answer_str + ", Answer_index="
-                + answer_index
+        return "Subject [Id=" + id + ", Title=" + title + ", Answer_str=" + answerStr + ", Answer_index="
+                + answerIndex
                 + "]";
     }
 }
