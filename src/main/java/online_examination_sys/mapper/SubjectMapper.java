@@ -11,7 +11,7 @@ public interface SubjectMapper {
 
     public Subject getSubjectById(@Param("Id") int id);
 
-    public int addSubject(RegisterDTO subject);
+    public int addSubject(Subject subject);
 
     public int updateSubjectById(Subject subject);
 

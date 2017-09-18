@@ -2,17 +2,17 @@ package online_examination_sys.domain.dao.dto;
 
 import java.util.List;
 
-import online_examination_sys.domain.dao.model.SubjectModel;
+import online_examination_sys.domain.dao.po.Subject;
 
 public class SubjectListDTO extends BaseDTO {
 	
-	private List<SubjectModel> subjectList;
+	private List<Subject> subjectList;
 
-	public List<SubjectModel> getSubjectList() {
+	public List<Subject> getSubjectList() {
 		return subjectList;
 	}
 
-	public void setSubjectList(List<SubjectModel> subjectList) {
+	public void setSubjectList(List<Subject> subjectList) {
 		this.subjectList = subjectList;
 	}
 	

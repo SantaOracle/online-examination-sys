@@ -36,7 +36,6 @@ public class SubjectController {
         @RequestParam(value = "answerStr", required = false)String answerStr,
         @RequestParam(value = "answerIndex", required = false)int answerIndex
     ){
-        TestDTO testDTO = new TestDTO();
         return subjectService.updateSubject(id, title, answerStr, answerIndex);
     }
 

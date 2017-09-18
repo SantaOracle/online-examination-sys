@@ -5,7 +5,7 @@ public class Subject {
     private int id;
     private String title;
     private String answer_str;
-    private String answer_index;
+    private int answer_index;
 
     public int getId() {
         return id;
@@ -31,11 +31,11 @@ public class Subject {
         this.answer_str = answer_str;
     }
 
-    public String getAnswer_index() {
+    public int getAnswer_index() {
         return answer_index;
     }
 
-    public void setAnswer_index(String answer_index) {
+    public void setAnswer_index(int answer_index) {
         this.answer_index = answer_index;
     }
     @Override
