@@ -19,7 +19,7 @@
 	</select>
 
 	<update id="updateUserById" parameterType="User">
-		UPDATE `` SET
+		UPDATE `user` SET
 		<if test="password!=null and password!=''">
 			password=#{password}
 		</if>
