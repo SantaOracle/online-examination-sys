@@ -43,6 +43,7 @@ public class UserServiceImpl implements UserService {
 		//根据验证结果，来决定是否写库
 		if (resUser == null){
 			userMapper.addUser(user);
+			userDTO.setUser(userMapper.getUserByUser(user));
 		}else{
 			userDTO.setResultCode(0);
 			userDTO.setResultMsg("该用户名已存在");
