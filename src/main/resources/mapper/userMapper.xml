@@ -6,7 +6,7 @@
 <mapper namespace="online_examination_sys.mapper.UserMapper">
 
 	<select id="getUserByUser" parameterType="User" resultType="User">
-		SELECT * FROM user WHERE 1=1
+		SELECT * FROM `user` WHERE 1=1
 		<if test="id!=null and id!=''">
 			AND id=#{id}
 		</if>
@@ -19,7 +19,7 @@
 	</select>
 
 	<update id="updateUserById" parameterType="User">
-		UPDATE user SET
+		UPDATE `` SET
 		<if test="password!=null and password!=''">
 			password=#{password}
 		</if>
@@ -27,7 +27,7 @@
 	</update>
 
 	<insert id="addUser" parameterType="User">
-		INSERT INTO user (username, password, is_admin) VALUES (#{username}, #{password}, #{isAdmin})
+		INSERT INTO `user` (username, password, is_admin) VALUES (#{username}, #{password}, #{isAdmin})
 	</insert>
 
 </mapper>

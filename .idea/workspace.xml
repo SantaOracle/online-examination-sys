@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="04f3852a-1693-4139-b6e8-a5130cf9dcc3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/online_examination_sys/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/online_examination_sys/service/impl/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/online_examination_sys/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="502">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,15 +55,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userMapper.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userMapper.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="870">
-              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="502">
+              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding>
-                <marker date="1505702160362" expanded="true" signature="297:315" ph="SELECT * FRO... " />
-                <marker date="1505702160362" expanded="true" signature="613:723" ph="UPDATE user " />
-                <marker date="1505702160362" expanded="true" signature="782:875" ph="INSERT INTO " />
+                <marker date="1505702629563" expanded="true" signature="297:316" ph="SELECT * FRO... " />
+                <marker date="1505702629563" expanded="true" signature="615:723" ph="UPDATE `` SE... " />
+                <marker date="1505702629563" expanded="true" signature="782:877" ph="INSERT INTO " />
               </folding>
             </state>
           </provider>
@@ -164,8 +163,8 @@
         <option value="$PROJECT_DIR$/src/main/java/online_examination_sys/mapper/NoticeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/online_examination_sys/mapper/AchivementMapper.java" />
         <option value="$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/online_examination_sys/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" />
       </list>
     </option>
   </component>
@@ -521,7 +520,7 @@
       <updated>1505650762310</updated>
       <workItem from="1505650764691" duration="4829000" />
       <workItem from="1505696441084" duration="522000" />
-      <workItem from="1505696985661" duration="5382000" />
+      <workItem from="1505696985661" duration="5872000" />
     </task>
     <task id="LOCAL-00001" summary="add some new po">
       <created>1505650908605</created>
@@ -579,11 +578,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505701354497</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="修改了userMapper的一个SQL映射错误">
+      <created>1505702391285</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1505702391285</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17230000" />
+    <option name="totallyTimeSpent" value="17720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -634,7 +640,8 @@
     <MESSAGE value="set .gitignore" />
     <MESSAGE value="userMapper映射文件完成" />
     <MESSAGE value="添加@Repository标签" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加@Repository标签" />
+    <MESSAGE value="修改了userMapper的一个SQL映射错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了userMapper的一个SQL映射错误" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -706,9 +713,9 @@
         <state relative-caret-position="660">
           <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
-            <marker date="1505702160362" expanded="true" signature="297:315" ph="SELECT * FRO... " />
-            <marker date="1505702160362" expanded="true" signature="613:723" ph="UPDATE user " />
-            <marker date="1505702160362" expanded="true" signature="782:875" ph="INSERT INTO " />
+            <marker date="1505702629563" expanded="true" signature="297:316" ph="SELECT * FRO... " />
+            <marker date="1505702629563" expanded="true" signature="615:723" ph="UPDATE `` SE... " />
+            <marker date="1505702629563" expanded="true" signature="782:877" ph="INSERT INTO " />
           </folding>
         </state>
       </provider>
@@ -946,18 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <marker date="1505702160362" expanded="true" signature="297:315" ph="SELECT * FRO... " />
-            <marker date="1505702160362" expanded="true" signature="613:723" ph="UPDATE user " />
-            <marker date="1505702160362" expanded="true" signature="782:875" ph="INSERT INTO " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online_examination_sys/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -982,9 +977,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/online_examination_sys/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="502">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <marker date="1505702629563" expanded="true" signature="297:316" ph="SELECT * FRO... " />
+            <marker date="1505702629563" expanded="true" signature="615:723" ph="UPDATE `` SE... " />
+            <marker date="1505702629563" expanded="true" signature="782:877" ph="INSERT INTO " />
+          </folding>
         </state>
       </provider>
     </entry>
