@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>在线考试系统登录</title>
+    <link rel="stylesheet" type="text/css" href="styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/login.css" />
+
+	<script type="text/javascript" src="scripts/jquery-1.7.2.js" />
+	<script type="text/javascript">
+        function login(){
+            var user = document.getElementById("user");
+            var manager = document.getElementById("manager");
+            if(user.checked){
+                document.getElementById("f").setAttribute("action","view/html/index_user.html");
+            }else if(manager.checked){
+                document.getElementById("f").setAttribute("action","view/html/index_manager.html");
+            }else{
+                alert("123");
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+	<div class="warp">
+		<!--头部开始-->
+        <div class="top_c">
+			<h1>在线考试系统___登录</h1>
+        </div>
+		<!--头部结束-->
+		<div class="row-fluid">
+			<h1 style="color: #586683;">欢迎使用在线考试系统</h1>
+			<form id="f" action="" method="post">
+				<p>
+					<label>帐&nbsp;&nbsp;&nbsp;号：<input name="username" type="text" id="uname" /></label>
+				</p>
+				<p>
+					<label>密&nbsp;&nbsp;&nbsp;码：<input name="password" type="password" id="pwd" /></label>
+				</p>
+                <div class="checkbox" style="position: relative; margin-left: 106px;">
+                    <label style="float:left; margin-right: 5px;">普通用户</label><input style="float:left;" name="select" type="radio" id="user" onclick="login()"/>
+                    <label style="float:left; margin-right: 5px;">管理员</label><input style="float:left;" name="select" type="radio" id="manager" onclick="login()"/>
+					<a href="#" style="position: absolute; right: 120px;">忘记密码？</a>
+                </div>
+				<p class="tip">&nbsp;</p>
+				<hr />
+				<input type="submit" value=" 登 录 " class="btn btn-primary btn-large login" />
+				&nbsp;&nbsp;&nbsp;<input type="button" value=" 注 册 " onclick="window.location.href='register.html';" class="btn btn-large" />
+			</form>
+		</div>
+		<!--<div onclick="test()">-->
+			<!--测试按钮-->
+		<!--</div>-->
+		<!--底部开始-->
+        <div class="bottom_c">Copyright &copy;2017</div>
+        <!--底部结束-->
+	</div>
+</body>
+<script type="text/javascript">
+    function test(){
+        alert(1);
+        var url = "localhost:8080/user/login";
+        $.ajax({
+            url: url,//方法路径URL
+            data: {
+                username:"fork",
+                password:"123456",
+                isAdmin:0
+            },//参数
+            dataType: 'json',
+            type: 'POST',
+            async: false,//默认异步调用 false：同步
+            success: function (data) {
+                var retInfo = eval(data);
+                //提交成功
+                if (retInfo == true) {
+                    alert(JSON.stringify(data));
+                }
+            },
+            error: function () {
+                alert('提交数据失败！');
+            }
+        })
+    }
+
+</script>
+</html>

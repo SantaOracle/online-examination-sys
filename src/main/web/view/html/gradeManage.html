@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>成绩管理</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/formui.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/themes/gray/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/ui-lightness/jquery-ui-1.8.22.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/themes/icon.css"/>
+    <script type="text/javascript" src="../../scripts/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="../../scripts/tb.js"></script>
+</head>
+<body>
+<div class="alert alert-info"><b>当前位置<b class="tip"></b>成绩管理</b></div>
+<form action="gradeManage.html" method="post">
+    <table class="tbform">
+        <tbody>
+        <tr>
+            <td  class="tdl">用户名：</td>
+            <td><input  style="width: 400px;"/></td>
+            <td  class="tdl">试卷标题：</td>
+            <td><input  style="width: 400px;" /></td>
+            <td><input type="submit" class="btn"  value="查询"/></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<table class="tb" id="list">
+    <thead>
+    <tr>
+        <th>用户名</th>
+        <th>试卷标题</th>
+        <th>成绩</th>
+        <th width="20%">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td>1</td>
+        <td>101</td>
+        <td>1</td>
+        <td>
+            <a href="gradeAlter.html?roomId=1" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">编辑</a>
+        </td>
+    </tr>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <table class="tb" >
+            <tr class="pager">
+                <th width="100%">
+                </th>
+            </tr>
+        </table>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>

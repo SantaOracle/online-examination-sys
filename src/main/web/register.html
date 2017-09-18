@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>在线考试系统注册</title>
+    <link rel="stylesheet" type="text/css" href="styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="styles/base.css" />
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/login.css" />
+</head>
+<body>
+<div class="warp">
+    <!--头部开始-->
+    <div class="top_c">
+        <h1>在线考试系统___注册</h1>
+        <a href="login.html" class="loginA" style="color: #fff ; position: absolute; top: 75px; right: 15px;">已有账号？点击登录</a>
+    </div>
+    <!--头部结束-->
+    <div class="row-fluid">
+        <h1 style="color: #586683;">在线考试系统</h1>
+        <form action="login.html" method="post">
+            <p style="display: none;">
+                <label>帐&nbsp;&nbsp;&nbsp;号：<input name="id" type="text" id="uid" /></label>
+            </p>
+            <p>
+                <label>用户名：<input name="username" type="text" id="uname" /></label>
+            </p>
+            <p>
+                <label>密&nbsp;&nbsp;&nbsp;码：<input name="password" type="password" id="pwd" /></label>
+            </p>
+            <p class="tip">&nbsp;</p>
+            <hr />
+            <input type="button" value=" 注 册 " onclick="alert('注册成功！');window.location.href='login.html';" class="btn btn-primary btn-large" />
+        </form>
+    </div>
+    <!--底部开始-->
+    <div class="bottom_c">Copyright &copy;2017</div>
+    <!--底部结束-->
+</div>
+</body>
+</html>

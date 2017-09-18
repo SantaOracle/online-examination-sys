@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>查看试卷</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/formui.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/admin-all.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/themes/gray/easyui.css"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/ui-lightness/jquery-ui-1.8.22.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../styles/themes/icon.css"/>
+    <script type="text/javascript" src="../../scripts/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../scripts/jquery-ui-1.8.22.custom.min.js"></script>
+    <script type="text/javascript" src="../../scripts/tb.js"></script>
+    <style type="text/css">
+        .t{ width:100%; background: #cfd6e9; margin-bottom: 25px;}
+        .t h1{ font-size: 16px;}
+        .t b{ font-size: 14px; font-weight: 400;}
+        .t b{ display: block; width: 100%;}
+        .t label{ font-size: 14px;}
+        .t label,input{ float:left;}
+        .t input{ float:left; margin: 5px 5px 0 0;}
+    </style>
+</head>
+<body>
+<div class="alert alert-info"><b>当前位置<b class="tip"></b>试卷管理<b class="tip"></b>查看试卷</b></div>
+<form action="examList.html" method="post">
+    <table class="tbform">
+        <tbody>
+        <tr>
+            <td  class="tdl">试卷信息：</td>
+            <td><input style="width:600px;" /></td>
+            <td><input style="width:100px;" type="submit" class="btn"  value="查询"/></td>
+            <td><a id="add" href="examAdd.html" class="easyui-linkbutton" data-options="iconCls:'icon-back'">新增</a></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+<table class="tb" id="list">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>试卷信息</th>
+        <th>试题</th>
+        <th width="20%">操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td>1</td>
+        <td>ffgfddgfdgdfgdfg</td>
+        <td>1ddgdfddgfdg</td>
+        <td>
+            <a href="examAlter.html" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">编辑</a>
+            <a href="examDel.html" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">删除</a>
+        </td>
+    </tr>
+
+    </tbody>
+    <tfoot>
+    <tr>
+        <table class="tb" >
+            <tr class="pager">
+                <th width="100%">
+                </th>
+            </tr>
+        </table>
+    </tr>
+    </tfoot>
+</table>
+</body>
+</html>
